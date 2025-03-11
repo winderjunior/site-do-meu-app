@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFE MENU - Cardápio Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="import" href="contato/menu/menu.html">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#">Home</a>
+            <a href="#testar">Testar Agora</a>
+            <a href="#benefits">Benefícios</a>
+            <a href="#plans">Planos</a>
+            <a href="#contact">Contato</a>
+        </div>
+        <div class="container">
+            <h1>SAFE MENU</h1>
+            <p>Seu cardápio digital completo, rápido e fácil!</p>
+            <img src="imagens/header.jpg" alt="SAFE MENU - Cardápio Digital" class="header-img">
+            <a href="#testar" class="btn primary">Testar Agora</a>
+        </div>
+    </header>
+
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2>Por que escolher o SAFE MENU?</h2>
+            <div class="benefit-item">
+                <i class="fas fa-qrcode"></i>
+                <h3>Acesso Fácil</h3>
+                <p>Seus clientes acessam o cardápio por um link ou QR Code.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Pedidos Online</h3>
+                <p>Clientes fazem pedidos diretamente pelo celular.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-credit-card"></i>
+                <h3>Pagamentos Integrados</h3>
+                <p>Receba pagamentos de forma rápida e segura.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="plans" id="plans">
+        <div class="container">
+            <h2>Escolha o Plano Ideal para o Seu Estabelecimento</h2>
+            <div class="plan" onclick="location.href='planos/plano-basico.html'">
+                <h3>Plano Básico - <span>R$ 29,99/mês</span></h3>
+                <ul>
+                    <li>✔ Cardápio digital personalizado</li>
+                    <li>✔ Acesso via QR Code</li>
+                    <li>✔ Link exclusivo para clientes</li>
+                </ul>
+            </div>
+            <div class="plan" onclick="location.href='planos/plano-intermediario.html'">
+                <h3>Plano Intermediário - <span>R$ 49,99/mês</span></h3>
+                <ul>
+                    <li>✔ Tudo do Plano Básico</li>
+                    <li>✔ Pedidos online</li>
+                    <li>✔ Carrinho de compras</li>
+                    <li>✔ Controle de estoque</li>
+                </ul>
+            </div>
+            <div class="plan" onclick="location.href='planos/plano-avancado.html'">
+                <h3>Plano Avançado - <span>R$ 79,99/mês</span></h3>
+                <ul>
+                    <li>✔ Tudo do Plano Intermediário</li>
+                    <li>✔ Pagamentos integrados</li>
+                    <li>✔ Tempo de preparo dos pedidos</li>
+                    <li>✔ Status do pedido (Preparando, Entregue, etc.)</li>
+                    <li>✔ Rastreamento do pedido em tempo real</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Fale conosco para mais informações!</p>
+            <a href="contato.html" class="btn secondary">Entre em Contato</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SAFE MENU - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte e cores */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container centralizado */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 4px solid #1a252f;
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Seção de preço */
+.price {
+    background-color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 4px solid #2c3e50;
+}
+
+.price h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.price p {
+    font-size: 18px;
+    color: #666;
+}
+
+.price .btn {
+    display: inline-block;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.price .btn:hover {
+    background-color: #1a252f;
+}
+
+/* Seção de funcionalidades */
+.features {
+    background-color: #fff;
+    padding: 40px 0;
+    border-bottom: 4px solid #e0e0e0;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.feature-item {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item i {
+    font-size: 30px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.feature-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Seção "Por que escolher?" */
+.why-choose {
+    background-color: #f1f1f1;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.why-choose h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.why-choose p {
+    font-size: 18px;
+    color: #444;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2c3e50;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .btn {
+    display: inline-block;
+    background-color: #1a252f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+footer .btn:hover {
+    background-color: #111922;
+}
