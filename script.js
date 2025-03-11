@@ -15,3 +15,17 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("menuToggle").addEventListener("click", function() {
     document.getElementById("navbarLinks").classList.toggle("active");
 });
+document.getElementById("menuToggle").addEventListener("click", function() {
+    document.getElementById("sideMenu").classList.toggle("active");
+});
+
+// Fechar a barra lateral se o usuário clicar fora dela
+document.addEventListener("click", function(event) {
+    const sideMenu = document.getElementById("sideMenu");
+    const menuToggle = document.getElementById("menuToggle");
+
+    // Verifica se o clique foi fora da barra lateral e do botão do menu hambúrguer
+    if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        sideMenu.classList.remove("active");
+    }
+});

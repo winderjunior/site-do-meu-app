@@ -22,18 +22,8 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
 /* Estilo para a barra de navegação */
-
-@media (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-    }
-
-    .navbar-links.active {
-        display: block;
-    }
-}
 .navbar {
     position: fixed;
     top: 0;
@@ -47,67 +37,8 @@ body {
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-/* Estilo do menu (hamburger) */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-}
 
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    border-radius: 5px;
-}
-
-/* Mostrar menu como coluna em dispositivos móveis */
-.navbar-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-links a {
-    padding: 10px 20px;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-/* Responsividade: exibir o botão de menu em telas menores */
-@media (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        width: 100%;
-        text-align: center;
-        flex-direction: column;
-        background-color: #34495e;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar-links a {
-        padding: 15px;
-        font-size: 18px;
-        color: white;
-    }
-
-    .navbar-links.active {
-        display: block;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-}
-
-
+/* Menu principal */
 .navbar a {
     color: white;
     text-decoration: none;
@@ -135,19 +66,107 @@ body {
     color: white;
 }
 
+/* Responsividade do menu */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
+    /* Esconde o menu normal em dispositivos móveis */
+    .navbar-links {
+        display: flex;
     }
 
-    .navbar a {
-        margin: 10px 0;
+    /* Exibe o menu hambúrguer */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Exibe a barra lateral quando ativa */
+    .side-menu.active {
+        left: 0;
     }
 }
 
+/* Barra lateral (side menu) */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Começa fora da tela */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
 
-/* Cabeçalho Moderno */
+.side-menu-links {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.side-menu-links a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    font-size: 18px;
+}
+
+.side-menu-links a:hover {
+    background-color: #444;
+}
+
+/* Estilo do menu quando ativo */
+.side-menu.active {
+    left: 0; /* Mostra a barra lateral */
+}
+
+/* Menu Hambúrguer */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Menu normal em telas grandes */
+@media (min-width: 769px) {
+    .navbar-links {
+        display: flex; /* Exibe o menu normal */
+    }
+
+    .menu-toggle {
+        display: none; /* Esconde o menu hambúrguer */
+    }
+}
+
+/* Animação do botão do menu */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg);
+    top: 7px;
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    top: -7px;
+}
+
+/* Cabeçalho */
 header {
     background: linear-gradient(135deg, #34495e, #2c3e50);
     color: #fff;
@@ -191,8 +210,6 @@ header .btn.primary:hover {
 }
 
 /* Benefícios */
-/* Benefícios */
-/* Benefícios */
 .benefits {
     background-color: #ffffff;
     padding: 40px 0;
@@ -217,11 +234,10 @@ header .btn.primary:hover {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Efeito de Hover nos cards */
 .benefit-item:hover {
-    transform: translateY(-10px); /* Movimenta o card para cima */
-    background-color: #bdc3c7; /* Muda a cor de fundo */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar mais destaque */
+    transform: translateY(-10px);
+    background-color: #bdc3c7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .benefit-item h3 {
@@ -229,21 +245,20 @@ header .btn.primary:hover {
     margin-bottom: 10px;
 }
 
-/* Responsividade para telas pequenas */
+/* Responsividade */
 @media (max-width: 768px) {
     .benefits .container {
         display: flex;
-        flex-direction: column; /* Empilha os cards verticalmente */
-        align-items: center; /* Centraliza os cards */
+        flex-direction: column;
+        align-items: center;
     }
 
     .benefit-item {
-        width: 80%; /* Aumenta a largura dos cards para 80% em telas pequenas */
-        margin-bottom: 20px; /* Adiciona espaço entre os cards */
+        width: 80%;
+        margin-bottom: 20px;
         padding: 20px;
     }
 }
-
 
 /* Seção de Planos */
 .plans {
@@ -266,7 +281,6 @@ header .btn.primary:hover {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-   
     text-align: left;
 }
 
@@ -322,43 +336,11 @@ header .btn.primary:hover {
     text-decoration: none;
 }
 
-/* Estilo do botão "Entre em Contato" */
-.btn.secondary {
-    background-color: #1abc9c;
-    color: white;
-    padding: 14px 30px;
-    font-size: 18px;
-    text-decoration: none;
-    border-radius: 25px;
-    display: inline-block;
-    margin-top: 20px;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover do botão "Entre em Contato" */
-.btn.secondary:hover {
+.contact .btn.secondary:hover {
     background-color: #16a085;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
-/* Efeito de foco no botão */
-.btn.secondary:focus {
-    outline: none;
-    border: 2px solid #1abc9c;
-    box-shadow: 0 0 5px rgba(26, 188, 156, 0.8);
-}
-
-/* Responsividade do botão */
-@media (max-width: 768px) {
-    .btn.secondary {
-        width: 100%;
-        padding: 12px 20px;
-        font-size: 16px;
-    }
-}
-
 
 /* Rodapé */
 footer {
