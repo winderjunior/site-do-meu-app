@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* Fonte e cores */
 body {
@@ -20,6 +23,17 @@ body {
     padding: 20px;
 }
 /* Estilo para a barra de navegação */
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar-links.active {
+        display: block;
+    }
+}
 .navbar {
     position: fixed;
     top: 0;
@@ -30,8 +44,69 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+/* Estilo do menu (hamburger) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Mostrar menu como coluna em dispositivos móveis */
+.navbar-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-links a {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Responsividade: exibir o botão de menu em telas menores */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        background-color: #34495e;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-links a {
+        padding: 15px;
+        font-size: 18px;
+        color: white;
+    }
+
+    .navbar-links.active {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
 
 .navbar a {
     color: white;
@@ -59,96 +134,6 @@ body {
     font-weight: 600;
     color: white;
 }
-/* Responsividade para dispositivos móveis */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 15px;
-    }
-
-    .navbar a {
-        margin: 5px 0;
-        font-size: 14px;
-    }
-
-    header {
-        padding: 60px 20px;
-    }
-
-    header h1 {
-        font-size: 32px;
-    }
-
-    header p {
-        font-size: 18px;
-    }
-
-    .benefit-item {
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 20px;
-    }
-
-    .plans .container {
-        display: block;
-        gap: 20px;
-    }
-
-    .plan {
-        flex: 1 1 100%;
-        padding: 20px;
-    }
-
-    .plan h3 {
-        font-size: 18px;
-    }
-
-    .contact .btn.secondary {
-        width: 100%;
-        padding: 12px 20px;
-        font-size: 16px;
-    }
-
-    footer p {
-        font-size: 14px;
-    }
-}
-
-/* Responsividade para telas muito pequenas (ex. smartphones verticais) */
-@media (max-width: 480px) {
-    .navbar a {
-        font-size: 12px;
-        padding: 8px 15px;
-    }
-
-    header h1 {
-        font-size: 28px;
-    }
-
-    header p {
-        font-size: 16px;
-    }
-
-    .benefit-item {
-        width: 100%;
-        padding: 15px;
-    }
-
-    .plan {
-        flex: 1 1 100%;
-        padding: 15px;
-    }
-
-    .plan h3 {
-        font-size: 16px;
-    }
-
-    footer p {
-        font-size: 12px;
-    }
-}
-
 
 @media (max-width: 768px) {
     .navbar {
@@ -207,6 +192,7 @@ header .btn.primary:hover {
 
 /* Benefícios */
 /* Benefícios */
+/* Benefícios */
 .benefits {
     background-color: #ffffff;
     padding: 40px 0;
@@ -241,6 +227,21 @@ header .btn.primary:hover {
 .benefit-item h3 {
     font-size: 22px;
     margin-bottom: 10px;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .benefits .container {
+        display: flex;
+        flex-direction: column; /* Empilha os cards verticalmente */
+        align-items: center; /* Centraliza os cards */
+    }
+
+    .benefit-item {
+        width: 80%; /* Aumenta a largura dos cards para 80% em telas pequenas */
+        margin-bottom: 20px; /* Adiciona espaço entre os cards */
+        padding: 20px;
+    }
 }
 
 

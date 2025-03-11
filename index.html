@@ -7,18 +7,25 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="import" href="contato/menu/menu.html">
 </head>
 <body>
     <header>
         <div class="navbar">
-            <a href="#">Home</a>
-            <a href="#testar">Testar Agora</a>
-            <a href="#benefits">Benefícios</a>
-            <a href="#plans">Planos</a>
-            <a href="#contact">Contato</a>
+            <a href="#home" class="logo">Meu Site</a>
+            <div class="menu-toggle" id="menuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="navbar-links" id="navbarLinks">
+                <a href="#home">Home</a>
+                <a href="#benefits">Sobre</a>
+                <a href="#plans">Serviços</a>
+                <a href="#contact">Contato</a>
+            </div>
         </div>
-        <div class="container">
+        
+        <div class="container" id="home">
             <h1>SAFE MENU</h1>
             <p>Seu cardápio digital completo, rápido e fácil!</p>
             <img src="imagens/header.jpg" alt="SAFE MENU - Cardápio Digital" class="header-img">

@@ -12,3 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", showOnScroll);
     showOnScroll();
 });
+document.getElementById("menuToggle").addEventListener("click", function() {
+    document.getElementById("navbarLinks").classList.toggle("active");
+});
