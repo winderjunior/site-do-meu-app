@@ -1,64 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="O SAFE MENU é um cardápio digital completo e integrado para estabelecimentos. Facilite pedidos online e pagamentos!">
+    <meta name="keywords"
+        content="cardápio digital, restaurante, pedidos online, pagamentos, QR Code, controle de estoque">
+    <meta name="author" content="SAFE MENU">
+    <meta name="robots" content="index, follow">
     <title>SAFE MENU - Cardápio Digital</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
-        <div class="navbar">
-            <div class="menu-toggle" id="menuToggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>SAFE MENU</h1>
+                </div>
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#home" aria-label="Ir para a página inicial">Início</a></li>
+                    <li><a href="#benefits" aria-label="Descubra os benefícios">Benefícios</a></li>
+                    <li><a href="#plans" aria-label="Veja os planos disponíveis">Planos</a></li>
+                    <li><a href="#contact" aria-label="Entre em contato conosco">Contato</a></li>
+                </ul>
             </div>
-            <div class="navbar-links" id="navbarLinks">
-                <a href="#home">Home</a>
-                <a href="#benefits">Sobre</a>
-                <a href="#plans">Serviços</a>
-                <a href="#contact">Contato</a>
-            </div>
-        </div>
-        </div>
-        
-        <div class="container" id="home">
-            <h1>SAFE MENU</h1>
-            <p>Seu cardápio digital completo, rápido e fácil!</p>
-            <img src="imagens/header.jpg" alt="SAFE MENU - Cardápio Digital" class="header-img">
-            <a href="#testar" class="btn primary">Testar Agora</a>
-        </div>
+        </nav>
     </header>
 
-    <section class="benefits" id="benefits">
+
+    <div class="container" id="home">
+        <h1>Transforme seu Estabelecimento com o SAFE MENU</h1>
+        <p>Descubra como nosso cardápio digital pode revolucionar a experiência de seus clientes e aumentar a eficiência do seu negócio. Com recursos exclusivos, como pedidos online, integração com impressoras e muito mais, o SAFE MENU é a solução que você precisa para alavancar seu estabelecimento.</p>
+        
+    </div>
+
+    <section id="benefits">
+        <h2>Por que escolher o SAFE MENU?</h2>
         <div class="container">
-            <h2>Por que escolher o SAFE MENU?</h2>
+
             <div class="benefit-item">
-                <i class="fas fa-qrcode"></i>
+                <i class="fas fa-qrcode" aria-hidden="true"></i>
                 <h3>Acesso Fácil</h3>
                 <p>Seus clientes acessam o cardápio por um link ou QR Code.</p>
             </div>
             <div class="benefit-item">
-                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
                 <h3>Pedidos Online</h3>
                 <p>Clientes fazem pedidos diretamente pelo celular.</p>
             </div>
             <div class="benefit-item">
-                <i class="fas fa-credit-card"></i>
+                <i class="fas fa-credit-card" aria-hidden="true"></i>
                 <h3>Pagamentos Integrados</h3>
                 <p>Receba pagamentos de forma rápida e segura.</p>
             </div>
         </div>
     </section>
 
-    <section class="plans" id="plans">
+    <section class="features">
+        <h2>Facilitando o Seu Dia a Dia</h2>
         <div class="container">
-            <h2>Escolha o Plano Ideal para o Seu Estabelecimento</h2>
+
+            <div class="feature-item">
+                <i class="fas fa-cogs" aria-hidden="true"></i>
+                <h3>Gestão Eficiente de Pedidos</h3>
+                <p>Organize todos os pedidos em um único lugar, com status de preparo, pagamento e entrega atualizados
+                    em tempo real.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-warehouse" aria-hidden="true"></i>
+                <h3>Controle de Estoque</h3>
+                <p>Monitore o estoque de produtos e ingredientes, evitando falhas e excessos. Receba notificações quando
+                    os itens estiverem acabando.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-chart-line" aria-hidden="true"></i>
+                <h3>Relatórios Detalhados</h3>
+                <p>Gerencie o desempenho do seu estabelecimento com relatórios detalhados sobre vendas, estoque e
+                    preferências dos clientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="plans" id="plans">
+        <h2>Escolha o Plano Ideal para o Seu Estabelecimento</h2>
+        <div class="container">
+
             <div class="plan" onclick="location.href='planos/plano-basico.html'">
-                <h3>Plano Básico - <span>R$ 29,99/mês</span></h3>
+                <h3>Plano Básico - <span>R$ 29,90/mês</span></h3>
                 <ul>
                     <li>✔ Cardápio digital personalizado</li>
                     <li>✔ Acesso via QR Code</li>
@@ -66,7 +103,7 @@
                 </ul>
             </div>
             <div class="plan" onclick="location.href='planos/plano-intermediario.html'">
-                <h3>Plano Intermediário - <span>R$ 49,99/mês</span></h3>
+                <h3>Plano Intermediário - <span>R$ 49,90/mês</span></h3>
                 <ul>
                     <li>✔ Tudo do Plano Básico</li>
                     <li>✔ Pedidos online</li>
@@ -75,7 +112,7 @@
                 </ul>
             </div>
             <div class="plan" onclick="location.href='planos/plano-avancado.html'">
-                <h3>Plano Avançado - <span>R$ 79,99/mês</span></h3>
+                <h3>Plano Avançado - <span>R$ 79,90/mês</span></h3>
                 <ul>
                     <li>✔ Tudo do Plano Intermediário</li>
                     <li>✔ Pagamentos integrados</li>
@@ -101,6 +138,30 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-list').classList.toggle('active');
+        }
+
+        // Scroll suave para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fechar o menu ao clicar em um link
+        document.querySelectorAll('.nav-list a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelector('.nav-list').classList.remove('active');
+            });
+        });
+    </script>
+
+    <script src="script.js" defer></script>
 </body>
+
 </html>
